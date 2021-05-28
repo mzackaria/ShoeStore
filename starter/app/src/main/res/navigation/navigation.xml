@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/login_nav">
+
+    <fragment
+        android:id="@+id/shoeListFragment"
+        android:name="com.udacity.shoestore.fragments.ShoeListFragment"
+        android:label="@string/list_of_shoes"
+        tools:layout="@layout/shoe_list_layout">
+        <action
+            android:id="@+id/action_shoeListFragment_to_editShoeFragment"
+            app:destination="@id/editShoeFragment" />
+        <argument
+            android:name="shoe"
+            app:argType="com.udacity.shoestore.models.Shoe"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+        <action
+            android:id="@+id/actionFromListToLogin"
+            app:destination="@id/login_nav"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/shoeListFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/editShoeFragment"
+        android:name="com.udacity.shoestore.fragments.EditShoeFragment"
+        android:label="@string/shoe"
+        tools:layout="@layout/edit_shoe_layout" >
+        <action
+            android:id="@+id/action_editShoeFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment"
+            app:popUpTo="@id/shoeListFragment"
+            app:popUpToInclusive="false"
+            app:popUpToSaveState="true"/>
+    </fragment>
+    <include app:graph="@navigation/login_nav"/>
+    <action
+        android:id="@+id/fromLoginToShoeListFragment"
+        app:destination="@id/shoeListFragment"
+        app:popUpTo="@id/login_nav"
+        app:popUpToInclusive="true" />
+</navigation>

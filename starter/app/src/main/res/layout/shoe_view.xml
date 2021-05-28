@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data >
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:elevation="2dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <TextView
+                style="@style/AppTheme.TextView.Label"
+                android:id="@+id/tv_namelabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_shoeName"
+                style="@style/AppTheme.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{shoe.name}"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_namelabel"
+                app:layout_constraintStart_toEndOf="@+id/tv_shoesizelabel"
+                tools:text="Nike Air" />
+
+            <TextView
+                style="@style/AppTheme.TextView.Label"
+                android:id="@+id/tv_companylabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/company"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_shoeName" />
+
+            <TextView
+                android:id="@+id/tv_companyName"
+                style="@style/AppTheme.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{shoe.company}"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_companylabel"
+                app:layout_constraintStart_toEndOf="@+id/tv_shoesizelabel"
+                tools:text="Nike" />
+
+            <TextView
+                style="@style/AppTheme.TextView.Label"
+                android:id="@+id/tv_shoesizelabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoe_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_companyName" />
+
+            <TextView
+                android:id="@+id/tv_shoeSize"
+                style="@style/AppTheme.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{shoe.size}"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_shoesizelabel"
+                app:layout_constraintStart_toEndOf="@+id/tv_shoesizelabel"
+                tools:text="45" />
+
+            <TextView
+                style="@style/AppTheme.TextView.Label"
+                android:id="@+id/tv_descriptionlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoe_description"
+                app:layout_constraintStart_toEndOf="@id/tv_shoeName"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_shoeDesciption"
+                style="@style/AppTheme.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{shoe.description}"
+                app:layout_constraintTop_toBottomOf="@id/tv_descriptionlabel"
+                app:layout_constraintStart_toStartOf="@+id/tv_descriptionlabel"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                tools:text="Chaussure Confortable" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

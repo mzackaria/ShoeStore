@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_password">Enter password</string>
+    <string name="label_login">Login</string>
+    <string name="login_label">Login</string>
+    <string name="register_label">Register</string>
+    <string name="welcome_message">"Hi, we're so thrilled that you registered on our awesome app. We hope that you will have an excellent experience creating your shoe store adventory. Please don't use the contact us button cause we haven't made that feature yet. "</string>
+    <string name="next">Next</string>
+    <string name="instruction">Instruction</string>
+    <string name="instruction_message">Here are a few tips to get you started:\n
+    1. Add a new shoe by clicking on the add button \n
+    2. Fill the form with your shoe information \n
+    3. Save the information \n
+    </string>
+    <string name="add_new_shoe_label">Add a new shoe</string>
+    <string name="shoe_name_label">Shoe name:</string>
+    <string name="select_shoe_name_label">Select shoe name</string>
+    <string name="add_company_name_label">Enter the company name</string>
+    <string name="company_name_label">Company name</string>
+    <string name="select_shoe_size">Select shoe size</string>
+    <string name="add_description_label">Description</string>
+    <string name="description_label">Description</string>
+    <string name="shoe_size_label">Shoe Size</string>
+    <string name="add_shoe_label">Add shoe</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="name">Name:</string>
+    <string name="company">Company:</string>
+    <string name="shoe_size">Shoe Size:</string>
+    <string name="shoe_description">Description:</string>
+    <string name="logout">Log out</string>
+    <string name="error_email_missing">please subscribe by putting your email</string>
+    <string name="error_password_missing">Please enter a password</string>
+    <string name="key_user_login">user_login</string>
+    <string name="example_shoe_name">Air Jordan</string>
+    <string name="example_company_name">Nike</string>
+    <string name="example_shoe_size">44</string>
+    <string name="list_of_shoes">List Of Shoes</string>
+    <string name="shoe">Shoe</string>
+    <string name="welcome_label">Welcome</string>
+    <string name="error_edit_shoe">Please put a name to the shoe</string>
+</resources>
