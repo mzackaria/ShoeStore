@@ -39,7 +39,6 @@ class ShoeListFragment : Fragment() , View.OnClickListener {
         })
 
         binding.addShoeButton.setOnClickListener(this)
-
         setHasOptionsMenu(true)
 
         return binding.root

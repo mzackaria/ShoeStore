@@ -4,69 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.udacity.shoestore.fragments.LoginFragment">
 
+    <!--
+    ConstraintLayout chosen mainly because I wanted the two register and login buttons on the same line
+    and this is not doable with a regular linear layout without nesting views
+   -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/titleConstraint"
+        android:id="@+id/mainConstraint"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/linearLayoutCompat"
+
+        <TextView
+            android:id="@+id/login_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="@string/login_label"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@id/mainConstraint"
+            app:layout_constraintStart_toStartOf="@id/mainConstraint"
+            app:layout_constraintTop_toTopOf="@id/mainConstraint" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/login_label"
-                android:textSize="24sp"
-                android:layout_gravity="center_horizontal"
-                android:padding="8dp"/>
+        <TextView
+            android:id="@+id/email_tv"
+            style="@style/AppTheme.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_email"
+            app:layout_constraintStart_toStartOf="@id/mainConstraint"
+            app:layout_constraintTop_toBottomOf="@id/login_tv" />
 
-            <TextView
-                style="@style/AppTheme.TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/prompt_email"/>
+        <EditText
+            android:id="@+id/editTextEmail"
+            style="@style/AppTheme.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@id/mainConstraint"
+            app:layout_constraintStart_toStartOf="@id/mainConstraint"
+            app:layout_constraintTop_toBottomOf="@id/email_tv" />
 
-            <EditText
-                android:id="@+id/editTextEmail"
-                style="@style/AppTheme.EditText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/enter_email"
-                android:inputType="textEmailAddress"/>
+        <TextView
+            android:id="@+id/password_tv"
+            style="@style/AppTheme.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_password"
+            app:layout_constraintStart_toStartOf="@id/mainConstraint"
+            app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
 
-            <TextView
-                style="@style/AppTheme.TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/prompt_password" />
-
-            <EditText
-                android:id="@+id/editTextPassword"
-                style="@style/AppTheme.EditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_password"
-                android:inputType="textPassword" />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        <EditText
+            android:id="@+id/editTextPassword"
+            style="@style/AppTheme.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@id/mainConstraint"
+            app:layout_constraintStart_toStartOf="@id/mainConstraint"
+            app:layout_constraintTop_toBottomOf="@id/password_tv" />
 
         <Button
             android:id="@+id/buttonRegister"
             style="@style/AppTheme.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:text="@string/register_label"
-            app:layout_constraintBaseline_toBaselineOf="@+id/buttonLogin"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayoutCompat"
-            app:layout_constraintStart_toEndOf="@+id/buttonLogin" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonLogin"
+            app:layout_constraintTop_toBottomOf="@id/editTextPassword" />
 
         <Button
             android:id="@+id/buttonLogin"
@@ -75,8 +87,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="@string/login_label"
-            app:layout_constraintStart_toStartOf="@+id/linearLayoutCompat"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/buttonRegister"
+            app:layout_constraintEnd_toEndOf="@id/mainConstraint"
+            app:layout_constraintEnd_toStartOf="@+id/buttonRegister"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

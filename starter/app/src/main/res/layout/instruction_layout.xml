@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.udacity.shoestore.fragments.InstructionFragment">
 
+
+  <!--
+  LinearLayout chosen because it's the simplest layout implementation with this type of UI
+  - ie one element in the center and the other one below it
+ -->
+
   <LinearLayout
       android:orientation="vertical"
       android:layout_width="match_parent"

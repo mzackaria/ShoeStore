@@ -10,6 +10,12 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
+    <!--
+    ScrollView layout chosen because the screen size might be to low to have all the elements visible
+    in the main view
+    LinearLayout chosen because it's the simplest layout implementation with this type of UI
+    - ie elements on top of each other. (It is also adaptable to all screen)
+   -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

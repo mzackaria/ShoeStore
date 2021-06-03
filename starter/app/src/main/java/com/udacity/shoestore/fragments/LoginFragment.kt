@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.LoginLayoutBinding
+import com.udacity.shoestore.utils.hideKeyboard
 
 class LoginFragment : Fragment(), View.OnClickListener {
 
@@ -37,8 +38,13 @@ class LoginFragment : Fragment(), View.OnClickListener {
         when {
             email.isEmpty() -> Toast.makeText(activity, R.string.error_email_missing, Toast.LENGTH_SHORT).show()
             password.isEmpty() -> Toast.makeText(activity, R.string.error_password_missing, Toast.LENGTH_SHORT).show()
-            else -> findNavController().navigate(LoginFragmentDirections.loginToWelcome())
+            else -> {
+                v?.hideKeyboard()
+                findNavController().navigate(LoginFragmentDirections.loginToWelcome())
+            }
         }
 
     }
+
+
 }

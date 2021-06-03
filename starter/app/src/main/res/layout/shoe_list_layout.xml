@@ -11,6 +11,11 @@
             type="com.udacity.shoestore.data.ShoeViewModel" />
     </data>
 
+
+    <!--
+    CoordinatorLayout chosen to add the floating button
+   -->
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -18,6 +23,11 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <!--
+            Linear layout chosen because we're going to add views one below another and the simplest
+            way to do this is to declare a linear layout with a vertical orientation
+           -->
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/linearLayout"
