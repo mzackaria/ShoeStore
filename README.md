@@ -1,52 +1,27 @@
-# README Template
+# ShoeStore
 
-Below is a template provided for use when building your README file for students.
+This project is a pet project to show case the use of the navigation component of the Android Framework.
 
-# Project Title
+This project is written in Kotlin.
 
-Project description goes here.
+## The app
 
-## Getting Started
+To show case this project, we used a simple shoe store app with 5 screens: 
 
-Instructions for how to get a copy of the project running on your local machine.
+- Login screen
+- Welcome Screen
+- Instruction Screen
+- List Of Shoes Screen
+- Add New Shoe Screen
 
-### Dependencies
+Once the user is logged in (mocked functionality) we simply display the list of shoes. If the user want to add a new shoe, he/she must click on the bottom-right button and go on the Add New Show Screen to add a new shoe.
 
-```
-Examples here
-```
+## The code
 
-### Installation
+You can find a simple show case of the navigation component with 2 main components: 
 
-Step by step explanation of how to get a dev environment running.
+- The login navigation graph: integrate the login screen, the welcome screen, the instruction screen
+- The main navigation graph: integrate the login nav graph, the "list of shoe"  screen, the "new shoe" screen
 
-List out the steps
+Once you're logged in, you shouldn't be able to go back to the login screen (except by login out) as the 2 graphs are independent.
 
-```
-Give an example here
-```
-
-## Testing
-
-Explain the steps needed to run any automated tests
-
-### Break Down Tests
-
-Explain what each test does and why
-
-```
-Examples here
-```
-## Project Instructions
-
-This section should contain all the student deliverables for this project.
-
-## Built With
-
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
-
-Include all items used to build project.
-
-## License
